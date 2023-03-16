@@ -32,7 +32,7 @@ class Script(scripts.Script):
                 enabled = gr.Checkbox(label='Enabled', value=False)
                 multiply = gr.Slider(value=1, minimum=1, maximum=5, step=1, label='Multiplication (2^N)', elem_id=id('m'))
                 weight = gr.Slider(minimum=-1, maximum=2, value=0.15, step=0.01, label='Weight')
-                gr.HTML(elem_id=id('container'))
+                gr.HTML(elem_id=id(f'{NAME}-container'))
                 
                 force_float = gr.Checkbox(label='Force convert half to float on interpolation (for some platforms)', value=False)
                 understand = gr.Checkbox(label='I know what I am doing.', value=False)
